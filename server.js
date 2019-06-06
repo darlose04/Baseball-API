@@ -14,29 +14,29 @@ db.connect();
 
 app.get("/batting2018", (req, res) => {
   const sql = `SELECT
-    baseball2018.name,
-    baseball2018.team,
-    baseball2018.games,
-    baseball2018.plate_appearances,
-    baseball2018.homeruns,
-    baseball2018.runs,
-    baseball2018.rbi,
-    baseball2018.sb,
-    baseball2018.bb_perc,
-    baseball2018.k_perc,
-    baseball2018.iso,
-    baseball2018.babip,
-    baseball2018.avg,
-    baseball2018.obp,
-    baseball2018.slg,
-    baseball2018.ops,
-    baseball2018.wOBA,
-    baseball2018.wRC_plus,
-    baseball2018.bsr,
-    baseball2018.off,
-    baseball2018.def,
-    baseball2018.war
-    FROM baseball2018`;
+    batting2018.name,
+    batting2018.team,
+    batting2018.games,
+    batting2018.plate_appearances,
+    batting2018.homeruns,
+    batting2018.runs,
+    batting2018.rbi,
+    batting2018.sb,
+    batting2018.bb_perc,
+    batting2018.k_perc,
+    batting2018.iso,
+    batting2018.babip,
+    batting2018.avg,
+    batting2018.obp,
+    batting2018.slg,
+    batting2018.ops,
+    batting2018.wOBA,
+    batting2018.wRC_plus,
+    batting2018.bsr,
+    batting2018.off,
+    batting2018.def,
+    batting2018.war
+    FROM batting2018`;
 
   db.query(sql, (err, result) => {
     if (err) throw err;
