@@ -36,7 +36,8 @@ app.get("/batting2018", (req, res) => {
     batting2018.off,
     batting2018.def,
     batting2018.war
-    FROM batting2018`;
+    FROM batting2018
+    ORDER BY war desc`;
 
   db.query(sql, (err, result) => {
     if (err) throw err;
