@@ -4,6 +4,11 @@ const db = require("../config/database");
 const Batting2018 = db.define(
   "batting2018",
   {
+    player_id: {
+      type: Sequelize.INTEGER,
+      primaryKey: true,
+      allowNull: false
+    },
     name: {
       type: Sequelize.STRING,
       allowNull: false
