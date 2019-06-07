@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../../../config/database");
-const Batting2018 = require("../../../models/Batting2018");
+const Batting2018 = require("../../../models/batters/Batting2018");
 const Sequelize = require("sequelize");
 
 router.get("/", (req, res) => {
