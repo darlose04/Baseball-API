@@ -56,5 +56,9 @@ app.use(
   "/starters2018",
   require("./routes/api/pitchers/starters/starters2018")
 );
+app.use(
+  "/relievers2018",
+  require("./routes/api/pitchers/relievers/relievers2018")
+);
 
 app.listen(4000, () => console.log("BaseballAPI has started..."));
