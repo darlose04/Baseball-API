@@ -52,5 +52,9 @@ const app = express();
 // });
 
 app.use("/batting2018", require("./routes/api/batting/batting2018"));
+app.use(
+  "/starters2018",
+  require("./routes/api/pitchers/starters/starters2018")
+);
 
 app.listen(4000, () => console.log("BaseballAPI has started..."));
