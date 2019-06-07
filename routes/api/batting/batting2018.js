@@ -5,9 +5,7 @@ const Batting2018 = require("../../../models/Batting2018");
 const Sequelize = require("sequelize");
 
 router.get("/", (req, res) => {
-  Batting2018.findAll()
-    .sort({ war: -1 })
-    .then(batters => res.json(batters));
+  Batting2018.findAll().then(batters => res.json(batters));
 });
 
 module.exports = router;
