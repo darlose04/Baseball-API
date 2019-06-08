@@ -61,7 +61,7 @@ const Starters2018 = db.define(
       type: Sequelize.STRING,
       allowNull: false
     },
-    hr_per_fb: {
+    hr_fb: {
       type: Sequelize.STRING,
       allowNull: false
     },
