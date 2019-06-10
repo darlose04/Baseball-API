@@ -51,21 +51,21 @@ const app = express();
 //   });
 // });
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-});
+// app.use(function(req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header(
+//     "Access-Control-Allow-Headers",
+//     "Origin, X-Requested-With, Content-Type, Accept"
+//   );
+// });
 
-app.use("/batting2018", require("./routes/api/batting/batting2018"));
+app.use("/batting/2018", require("./routes/api/batting/batting2018"));
 app.use(
-  "/starters2018",
+  "/starters/2018",
   require("./routes/api/pitchers/starters/starters2018")
 );
 app.use(
-  "/relievers2018",
+  "/relievers/2018",
   require("./routes/api/pitchers/relievers/relievers2018")
 );
 
