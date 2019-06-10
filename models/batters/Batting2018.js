@@ -42,11 +42,11 @@ const Batting2018 = db.define(
       allowNull: false
     },
     bb_perc: {
-      type: Sequelize.DECIMAL(4, 1),
+      type: Sequelize.STRING,
       allowNull: false
     },
     k_perc: {
-      type: Sequelize.DECIMAL(4, 1),
+      type: Sequelize.STRING,
       allowNull: false
     },
     iso: {
