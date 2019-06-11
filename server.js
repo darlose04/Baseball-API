@@ -60,13 +60,13 @@ app.use("/batting/2014", require("./routes/api/batting/batting2014"));
 
 // Starter Routes
 app.use(
-  "/starters/2018",
+  "/pitching/starters/2018",
   require("./routes/api/pitchers/starters/starters2018")
 );
 
 // Reliever Routes
 app.use(
-  "/relievers/2018",
+  "/pitching/relievers/2018",
   require("./routes/api/pitchers/relievers/relievers2018")
 );
 
