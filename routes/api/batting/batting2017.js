@@ -8,4 +8,13 @@ router.get("/", (req, res) => {
   Batting2017.findAll().then(batters => res.json(batters));
 });
 
+// get player from 2017 by name
+router.get("/:name", (req, res) => {
+  Batting2017.findOne({
+    where: {
+      name: req.params.name
+    }
+  }).then(batter => res.json(batter));
+});
+
 module.exports = router;

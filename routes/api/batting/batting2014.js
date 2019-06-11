@@ -10,10 +10,8 @@ router.get("/", (req, res) => {
   Batting2014.findAll().then(batters => res.json(batters));
 });
 
-// get player from 2014 by id
+// get player from 2014 by name
 router.get("/:name", (req, res) => {
-  // Batting2014.findByPk().then(batter => res.json(batter));
-
   Batting2014.findOne({
     where: {
       name: req.params.name
