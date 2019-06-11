@@ -51,6 +51,13 @@ const app = express();
 //   });
 // });
 
+app.set("view engine", "ejs");
+
+// Landing Page
+app.get("/", (req, res) => {
+  res.render("landing");
+});
+
 // Hitting Routes By Year
 app.use("/batting/2018", require("./routes/api/batting/batting2018"));
 app.use("/batting/2017", require("./routes/api/batting/batting2017"));
