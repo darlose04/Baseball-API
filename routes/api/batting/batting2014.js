@@ -7,7 +7,9 @@ const Op = Sequelize.Op;
 
 // get all players in 2014 table
 router.get("/", (req, res) => {
-  Batting2014.findAll().then(batters => res.json(batters));
+  Batting2014.findAll({
+    order: [["war", "DESC"]]
+  }).then(batters => res.json(batters));
 });
 
 // get player from 2014 by name

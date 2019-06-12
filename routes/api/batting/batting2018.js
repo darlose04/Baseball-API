@@ -5,7 +5,9 @@ const Batting2018 = require("../../../models/batters/Batting2018");
 const Sequelize = require("sequelize");
 
 router.get("/", (req, res) => {
-  Batting2018.findAll().then(batters => res.json(batters));
+  Batting2018.findAll({
+    order: [["war", "DESC"]]
+  }).then(batters => res.json(batters));
 });
 
 // get player from 2018 by name
