@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
 });
 
 // get player from 2014 by name
-router.get("/:name", (req, res) => {
+router.get("/players/:name", (req, res) => {
   Batting2014.findOne({
     where: {
       name: req.params.name

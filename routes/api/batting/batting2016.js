@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
 });
 
 // get player from 2016 by name
-router.get("/:name", (req, res) => {
+router.get("/players/:name", (req, res) => {
   Batting2016.findOne({
     where: {
       name: req.params.name
