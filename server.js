@@ -77,4 +77,7 @@ app.use(
   require("./routes/api/pitchers/relievers/relievers2018")
 );
 
+// Search Routes
+app.use("/api/batting/search", require("./routes/api/batting/playerSearch"));
+
 app.listen(4000, () => console.log("BaseballAPI has started..."));
