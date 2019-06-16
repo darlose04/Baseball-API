@@ -77,4 +77,6 @@ app.use(
   require("./routes/api/pitchers/relievers/relievers2018")
 );
 
-app.listen(4000, () => console.log("BaseballAPI has started..."));
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => console.log(`BaseballAPI has started on port ${PORT}`));
