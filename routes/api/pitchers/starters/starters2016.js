@@ -5,7 +5,9 @@ const Starters2016 = require("../../../../models/pitchers/starters/Starters2016"
 const Sequelize = require("sequelize");
 
 router.get("/", (req, res) => {
-  Starters2016.findAll().then(starters => res.json(starters));
+  Starters2016.findAll({
+    order: [["war", "DESC"]]
+  }).then(starters => res.json(starters));
 });
 
 module.exports = router;
