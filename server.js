@@ -67,6 +67,22 @@ app.use("/api/batting/2018", require("./routes/api/batting/batting2018"));
 
 // Starter Routes
 app.use(
+  "/api/pitching/starters/2014",
+  require("./routes/api/pitchers/starters/starters2014")
+);
+app.use(
+  "/api/pitching/starters/2015",
+  require("./routes/api/pitchers/starters/starters2015")
+);
+app.use(
+  "/api/pitching/starters/2016",
+  require("./routes/api/pitchers/starters/starters2016")
+);
+app.use(
+  "/api/pitching/starters/2017",
+  require("./routes/api/pitchers/starters/starters2017")
+);
+app.use(
   "/api/pitching/starters/2018",
   require("./routes/api/pitchers/starters/starters2018")
 );
