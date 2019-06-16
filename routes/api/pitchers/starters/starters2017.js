@@ -19,4 +19,13 @@ router.get("/players/:name", (req, res) => {
   }).then(starter => res.json(starter));
 });
 
+// get team from 2017
+router.get("/teams/:teamName", (req, res) => {
+  Starters2017.findAll({
+    where: {
+      team: req.params.teamName
+    }
+  }).then(team => res.json(team));
+});
+
 module.exports = router;
