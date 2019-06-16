@@ -65,7 +65,7 @@ app.use("/api/batting/2016", require("./routes/api/batting/batting2016"));
 app.use("/api/batting/2017", require("./routes/api/batting/batting2017"));
 app.use("/api/batting/2018", require("./routes/api/batting/batting2018"));
 
-// Starter Routes
+// Starter Routes By Year
 app.use(
   "/api/pitching/starters/2014",
   require("./routes/api/pitchers/starters/starters2014")
@@ -87,7 +87,23 @@ app.use(
   require("./routes/api/pitchers/starters/starters2018")
 );
 
-// Reliever Routes
+// Reliever Routes By Year
+app.use(
+  "/api/pitching/relievers/2014",
+  require("./routes/api/pitchers/relievers/relievers2014")
+);
+app.use(
+  "/api/pitching/relievers/2015",
+  require("./routes/api/pitchers/relievers/relievers2015")
+);
+app.use(
+  "/api/pitching/relievers/2016",
+  require("./routes/api/pitchers/relievers/relievers2016")
+);
+app.use(
+  "/api/pitching/relievers/2017",
+  require("./routes/api/pitchers/relievers/relievers2017")
+);
 app.use(
   "/api/pitching/relievers/2018",
   require("./routes/api/pitchers/relievers/relievers2018")
