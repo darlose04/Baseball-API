@@ -10,4 +10,13 @@ router.get("/", (req, res) => {
   }).then(starters => res.json(starters));
 });
 
+// get pitcher by name
+router.get("/players/:name", (req, res) => {
+  Starters2015.findOne({
+    where: {
+      name: req.params.name
+    }
+  }).then(starter => res.json(starter));
+});
+
 module.exports = router;
