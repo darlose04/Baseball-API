@@ -12,4 +12,13 @@ router.get("/", (req, res) => {
   }).then(batters => res.json(batters));
 });
 
+// get player by name
+router.get("/players/:name", (req, res) => {
+  Batting2014.findAll({
+    where: {
+      name: req.params.name
+    }
+  }).then(batter => res.json(batter));
+});
+
 module.exports = router;
