@@ -98,7 +98,7 @@ const Batting2014 = db.define(
       allowNull: false
     },
     year: {
-      type: Sequelize.INTEGER,
+      type: Sequelize.DATEONLY,
       allowNull: false
     }
   },
