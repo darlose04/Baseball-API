@@ -96,6 +96,10 @@ const Batting2014 = db.define(
     war: {
       type: Sequelize.DECIMAL(4, 1),
       allowNull: false
+    },
+    year: {
+      type: Sequelize.INTEGER,
+      allowNull: false
     }
   },
   {
