@@ -11,3 +11,5 @@ router.get("/", (req, res) => {
     order: [["team", "DESC"]]
   }).then(batters => res.json(batters));
 });
+
+module.exports = router;
