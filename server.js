@@ -25,6 +25,11 @@ app.get("/", (req, res) => {
   res.render("landing");
 });
 
+// Glossary Page
+app.get("/glossary", (req, res) => {
+  res.render("glossary");
+});
+
 // Hitting Routes By Year
 app.use("/api/batting/2014", require("./routes/api/batting/batting2014"));
 app.use("/api/batting/2015", require("./routes/api/batting/batting2015"));
