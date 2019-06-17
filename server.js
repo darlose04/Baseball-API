@@ -90,6 +90,12 @@ app.use(
   require("./routes/api/pitchers/starters/starters2018")
 );
 
+// All starters
+app.use(
+  "/api/pitching/starters/all",
+  require("./routes/api/pitchers/starters/allStarters")
+);
+
 // Reliever Routes By Year
 app.use(
   "/api/pitching/relievers/2014",
@@ -110,6 +116,12 @@ app.use(
 app.use(
   "/api/pitching/relievers/2018",
   require("./routes/api/pitchers/relievers/relievers2018")
+);
+
+// All relievers
+app.use(
+  "/api/pitching/relievers/all",
+  require("./routes/api/pitchers/relievers/allRelievers")
 );
 
 const PORT = process.env.PORT || 4000;
