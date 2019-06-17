@@ -8,7 +8,7 @@ const Op = Sequelize.Op;
 // get all players
 router.get("/", (req, res) => {
   AllBatters.findAll({
-    order: [["team", "DESC"]]
+    order: [["team", "ASC"]]
   }).then(batters => res.json(batters));
 });
 
