@@ -65,6 +65,9 @@ app.use("/api/batting/2016", require("./routes/api/batting/batting2016"));
 app.use("/api/batting/2017", require("./routes/api/batting/batting2017"));
 app.use("/api/batting/2018", require("./routes/api/batting/batting2018"));
 
+// All hitters
+app.use("/api/batting/all", require("./routes/api/batting/allBatters"));
+
 // Starter Routes By Year
 app.use(
   "/api/pitching/starters/2014",
