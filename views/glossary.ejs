@@ -1,7 +1,177 @@
 <% include ./partials/header %>
 
 <div class="container">
-  <h1>This is where I'm going to provide definitions of the stats used</h1>
+  <h1>Statistics Defined</h1>
+
+  <h3>Hitting Statistics</h3>
+  <p>
+    Statistic definitions from
+    <a href="https://library.fangraphs.com/offense/offensive-statistics-list/"
+      >Fangraphs</a
+    >
+  </p>
+  <ul class="list-group list-group-flush mb-4">
+    <li class="list-group-item">
+      <strong>Games: </strong>The number of games played in.
+    </li>
+    <li class="list-group-item">
+      <strong>Plate Appearances: </strong>The number of times the player has
+      come to the plate.
+    </li>
+    <li class="list-group-item">
+      <strong>Homeruns: </strong>The number of homeruns hit by the player.
+    </li>
+    <li class="list-group-item">
+      <strong>Runs: </strong>The number of runs scored by the player.
+    </li>
+    <li class="list-group-item">
+      <strong>RBI: </strong>Runs Batted In. The number times a run scores as a
+      result of a batter's plate appearance, does not count situations in which
+      an error caused the run to score or if a run scores when the batter hits
+      into a double play.
+    </li>
+    <li class="list-group-item">
+      <strong>Stolen Bases: </strong>The number of stolen bases.
+    </li>
+    <li class="list-group-item">
+      <strong>Walk Percentage (BB%): </strong>The frequency with which the
+      batter has walked. Calculated as walks divided by plate appearances.
+    </li>
+    <li class="list-group-item">
+      <strong>Strikeout Percentage (K%): </strong>The frequency with which the
+      batter strikes out. Calculated as strikeouts divided by plate appearances.
+    </li>
+    <li class="list-group-item">
+      <strong>ISO: </strong>Isolated Power. Average number of extra bases
+      (doubles, triples, homeruns) per at bat, calculated several ways such as
+      SLG minus AVG.
+    </li>
+    <li class="list-group-item">
+      <strong>BABIP: </strong>Batting Average on Balls in Play. The rate at
+      which the batter gets a hit when he puts the ball in play, calculated as
+      (H-HR) / (AB-K-HR+SF).
+    </li>
+    <li class="list-group-item">
+      <strong>AVG: </strong>Rate of hits per at bat, calculated as H / AB.
+    </li>
+    <li class="list-group-item">
+      <strong>OBP: </strong>On Base Percentage. Rate at which the batter reaches
+      base, calculated as (H+BB+HBP) / (AB+BB+HBP+SF).
+    </li>
+    <li class="list-group-item">
+      <strong>SLG: </strong>Slugging Percentage. Average number of total bases
+      per at bat, calculated as Total Bases / AB.
+    </li>
+    <li class="list-group-item"><strong>OPS: </strong>OBP + SLG.</li>
+    <li class="list-group-item">
+      <strong>wOBA: </strong>Weighted On Base Average. Combines all the
+      different aspects of hitting into one metric, weighting each of them in
+      proportion to their actual run value. While batting average, on-base
+      percentage, and slugging percentage fall short in accuracy and scope, wOBA
+      measures and captures offensive value more accurately and comprehensively.
+    </li>
+    <li class="list-group-item">
+      <strong>wRC+: </strong>Weighted Runs Created Plus. The most comprehensive
+      rate statistic uesd to measure hitting performance because it takes into
+      account the varying weights of each offensive action (like wOBA) and then
+      adjusts them for the park and league context in which they took place.
+    </li>
+    <li class="list-group-item">
+      <strong>BsR: </strong>Base Running Runs Above Average. Number of runs
+      above or below average a player has been worth on the bases, based on
+      stolen bases, caught stealing, extra bases taken, outs on the bases, and
+      avoiding double plays. It is the combination of wSB, UBR, and wGDP.
+    </li>
+    <li class="list-group-item">
+      <strong>Off: </strong>Offensive Runs Above Average. Number of runs above
+      or below average a player has been worth offensively, combining Batting
+      Runs and BsR.
+    </li>
+    <li class="list-group-item">
+      <strong>Def: </strong>Defensive Runs Above Average. Number of runs above
+      or below average a player has been worth on defense, combining Fielding
+      Runs and the positional adjustment.
+    </li>
+    <li class="list-group-item">
+      <strong>WAR: </strong>Wins Above Replacement. A comprehensive statistic
+      that estimates the number of wins a player has been worth to his team
+      compared to a freely available player such as a minor league free agent.
+      Here is a
+      <a href="https://library.fangraphs.com/war/war-position-players/">link</a>
+      that explains how Fangraphs calculates WAR, as there are different methods
+      of calculating it.
+    </li>
+  </ul>
+
+  <h3>Pitching Statistics</h3>
+  <p>
+    Statistic definitions from
+    <a href="https://library.fangraphs.com/pitching/complete-list-pitching/"
+      >Fangraphs</a
+    >
+  </p>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <strong>Games: </strong>The number of games played in.
+    </li>
+    <li class="list-group-item">
+      <strong>Plate Appearances: </strong>The number of games played in.
+    </li>
+    <li class="list-group-item">
+      <strong>Homeruns: </strong>The number of games played in.
+    </li>
+    <li class="list-group-item">
+      <strong>Runs: </strong>The number of games played in.
+    </li>
+    <li class="list-group-item">
+      <strong>RBI: </strong>The number of games played in.
+    </li>
+    <li class="list-group-item">
+      <strong>Stolen Bases: </strong>The number of games played in.
+    </li>
+    <li class="list-group-item">
+      <strong>Walk Percentage (BB%): </strong>The number of games played in.
+    </li>
+    <li class="list-group-item">
+      <strong>Strikeout Percentage (K%): </strong>The number of games played in.
+    </li>
+    <li class="list-group-item">
+      <strong>ISO: </strong>The number of games played in.
+    </li>
+    <li class="list-group-item">
+      <strong>BABIP: </strong>The number of games played in.
+    </li>
+    <li class="list-group-item">
+      <strong>AVG: </strong>The number of games played in.
+    </li>
+    <li class="list-group-item">
+      <strong>OBP: </strong>The number of games played in.
+    </li>
+    <li class="list-group-item">
+      <strong>SLG: </strong>The number of games played in.
+    </li>
+    <li class="list-group-item">
+      <strong>OPS: </strong>The number of games played in.
+    </li>
+    <li class="list-group-item">
+      <strong>wOBA: </strong>The number of games played in.
+    </li>
+    <li class="list-group-item">
+      <strong>wRC+: </strong>The number of games played in.
+    </li>
+    <li class="list-group-item">
+      <strong>BsR: </strong>The number of games played in.
+    </li>
+    <li class="list-group-item">
+      <strong>Off: </strong>The number of games played in.
+    </li>
+    <li class="list-group-item">
+      <strong>Def: </strong>The number of games played in.
+    </li>
+    <li class="list-group-item">
+      <strong>WAR: </strong>The number of games played in.
+    </li>
+  </ul>
 </div>
 
 <% include ./partials/footer %>
