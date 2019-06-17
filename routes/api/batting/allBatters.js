@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
 
 // get player by name
 router.get("/players/:name", (req, res) => {
-  Batting2014.findAll({
+  AllBatters.findAll({
     where: {
       name: req.params.name
     }
