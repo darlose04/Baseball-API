@@ -98,7 +98,7 @@ const AllBatters = db.define(
       allowNull: false
     },
     year: {
-      type: Sequelize.DATEONLY,
+      type: Sequelize.INTEGER,
       allowNull: false
     }
   },
