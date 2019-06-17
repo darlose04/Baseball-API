@@ -84,6 +84,10 @@ const Starters2014 = db.define(
     war: {
       type: Sequelize.DECIMAL(3, 1),
       allowNull: false
+    },
+    year: {
+      type: Sequelize.DATEONLY,
+      allowNull: false
     }
   },
   {
