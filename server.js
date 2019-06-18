@@ -33,6 +33,9 @@ app.get("/glossary", (req, res) => {
 // Hitting Routes
 app.use("/api/batting", require("./routes/api/batting"));
 
+// Reliever Routes
+app.use("/api/pitching/relievers", require("./routes/api/relieving"));
+
 // Starter Routes By Year
 app.use(
   "/api/pitching/starters/2014",
