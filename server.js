@@ -33,36 +33,11 @@ app.get("/glossary", (req, res) => {
 // Hitting Routes
 app.use("/api/batting", require("./routes/api/batting"));
 
+// Starter Routes
+app.use("/api/pitching/starters", require("./routes/api/starting"));
+
 // Reliever Routes
 app.use("/api/pitching/relievers", require("./routes/api/relieving"));
-
-// Starter Routes By Year
-app.use(
-  "/api/pitching/starters/2014",
-  require("./routes/api/pitchers/starters/starters2014")
-);
-app.use(
-  "/api/pitching/starters/2015",
-  require("./routes/api/pitchers/starters/starters2015")
-);
-app.use(
-  "/api/pitching/starters/2016",
-  require("./routes/api/pitchers/starters/starters2016")
-);
-app.use(
-  "/api/pitching/starters/2017",
-  require("./routes/api/pitchers/starters/starters2017")
-);
-app.use(
-  "/api/pitching/starters/2018",
-  require("./routes/api/pitchers/starters/starters2018")
-);
-
-// All starters
-app.use(
-  "/api/pitching/starters/all",
-  require("./routes/api/pitchers/starters/allStarters")
-);
 
 const PORT = process.env.PORT || 4000;
 
