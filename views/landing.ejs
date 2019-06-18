@@ -1,24 +1,56 @@
 <% include ./partials/header %>
 
 <div class="container">
-  <h1>
-    Instructions will probably go on this page, doesn't seem to be any need to
-    add a bunch of pages and complicate this more than it needs to be.
+  <h1 class="display-4 text-center mb-2">
+    BaseballAPI Usage
   </h1>
-  <code>
-    There may be a need to put some code in here, let's see what this looks
-    like.
-  </code>
-</div>
-
-<div class="container mt-4">
-  <h4><strong>Routes</strong></h4>
-  <p class="lead">Hitting Routes</p>
-  <p>Get all hitters from a specific year: /api/batting/year</p>
-  <p>Get a player from a specific year: /api/batting/year/players/name</p>
+  <p class="text-center mb-3">All information is in JSON format.</p>
+  <h3>Hitting Routes</h3>
   <p>
-    Get the players on a specific team by year: /api/batting/year/teams/teamName
+    Using GET requests, you can access the information at these routes for
+    hitting:
   </p>
+  <ul class="list-group list-group-flush mb-3">
+    <li class="list-group-item">
+      Get all batters from years 2014-2018:
+      <code>
+        /api/batting
+      </code>
+    </li>
+    <li class="list-group-item">
+      Get individual batter stats from every year:
+      <code>
+        /api/batting/players/:name
+      </code>
+      <p>
+        <strong>Note: </strong>Be sure to put a space in between the first and
+        last name:
+        <code>/api/batting/players/Mike Trout</code>
+      </p>
+    </li>
+    <li class="list-group-item">
+      Get batters by year:
+      <code>
+        /api/batting/:year
+      </code>
+    </li>
+    <li class="list-group-item">
+      Get individual batter by year:
+      <code>
+        /api/batting/:year/players/:name
+      </code>
+    </li>
+    <li class="list-group-item">
+      Get players by team by year:
+      <code>
+        /api/batting/:year/teams/:team
+      </code>
+      <p>
+        <strong>Note: </strong>This is just the team name, no city/state
+        included: <code>/api/batting/2014/teams/Cubs</code>
+      </p>
+    </li>
+  </ul>
 </div>
 
 <% include ./partials/footer %>
