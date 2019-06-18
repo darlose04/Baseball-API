@@ -27,7 +27,7 @@ router.get("/:year", (req, res) => {
     where: {
       year: req.params.year
     },
-    order: [[("war", "DESC")]]
+    order: [["war", "DESC"]]
   }).then(batters => res.json(batters));
 });
 
