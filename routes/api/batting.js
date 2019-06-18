@@ -31,4 +31,24 @@ router.get("/:year", (req, res) => {
   }).then(batters => res.json(batters));
 });
 
+// get individual batter by year
+router.get("/:year/players/:name", (req, res) => {
+  AllBatters.findOne({
+    where: {
+      year: req.params.year,
+      name: req.params.name
+    }
+  }).then(batter => res.json(batter));
+});
+
+// get players by team by year
+router.get("/:year/teams/:team", (req, res) => {
+  AllBatters.findAll({
+    where: {
+      year: req.params.year,
+      team: req.params.team
+    }
+  }).then(team => res.json(team));
+});
+
 module.exports = router;
