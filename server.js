@@ -64,34 +64,6 @@ app.use(
   require("./routes/api/pitchers/starters/allStarters")
 );
 
-// Reliever Routes By Year
-app.use(
-  "/api/pitching/relievers/2014",
-  require("./routes/api/pitchers/relievers/relievers2014")
-);
-app.use(
-  "/api/pitching/relievers/2015",
-  require("./routes/api/pitchers/relievers/relievers2015")
-);
-app.use(
-  "/api/pitching/relievers/2016",
-  require("./routes/api/pitchers/relievers/relievers2016")
-);
-app.use(
-  "/api/pitching/relievers/2017",
-  require("./routes/api/pitchers/relievers/relievers2017")
-);
-app.use(
-  "/api/pitching/relievers/2018",
-  require("./routes/api/pitchers/relievers/relievers2018")
-);
-
-// All relievers
-app.use(
-  "/api/pitching/relievers/all",
-  require("./routes/api/pitchers/relievers/allRelievers")
-);
-
 const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => console.log(`BaseballAPI has started on port ${PORT}`));
