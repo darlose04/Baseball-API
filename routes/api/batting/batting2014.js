@@ -10,8 +10,8 @@ router.get("/", (req, res) => {
   AllBatters.findAll({
     where: {
       year: 2014
-    }
-    // order: [["war", "DESC"]]
+    },
+    order: [["war", "DESC"]]
   }).then(batters => res.json(batters));
 });
 

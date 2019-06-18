@@ -1,19 +1,25 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../../../config/database");
-const Batting2017 = require("../../../models/batters/Batting2017");
+const AllBatters = require("../../../models/batters/AllBatters");
 const Sequelize = require("sequelize");
+const Op = Sequelize.Op;
 
+// get all players from 2017
 router.get("/", (req, res) => {
-  Batting2017.findAll({
+  AllBatters.findAll({
+    where: {
+      year: 2017
+    },
     order: [["war", "DESC"]]
   }).then(batters => res.json(batters));
 });
 
 // get player from 2017 by name
 router.get("/players/:name", (req, res) => {
-  Batting2017.findOne({
+  AllBatters.findOne({
     where: {
+      year: 2017,
       name: req.params.name
     }
   }).then(batter => res.json(batter));
@@ -21,8 +27,9 @@ router.get("/players/:name", (req, res) => {
 
 // get team from 2017
 router.get("/teams/:teamName", (req, res) => {
-  Batting2017.findAll({
+  AllBatters.findAll({
     where: {
+      year: 2017,
       team: req.params.teamName
     }
   }).then(team => res.json(team));
