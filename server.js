@@ -30,14 +30,8 @@ app.get("/glossary", (req, res) => {
   res.render("glossary");
 });
 
-// Hitting Routes By Year
+// Hitting Routes
 app.use("/api/batting", require("./routes/api/batting"));
-
-// app.use("/api/batting/2014", require("./routes/api/batting/batting2014"));
-// app.use("/api/batting/2015", require("./routes/api/batting/batting2015"));
-// app.use("/api/batting/2016", require("./routes/api/batting/batting2016"));
-// app.use("/api/batting/2017", require("./routes/api/batting/batting2017"));
-// app.use("/api/batting/2018", require("./routes/api/batting/batting2018"));
 
 // Starter Routes By Year
 app.use(
