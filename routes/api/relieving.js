@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const AllRelievers = require("../../models/AllRelievers");
 const Sequelize = require("sequelize");
+const Op = Sequelize.Op;
 
 // get all relievers from the table
 router.get("/", (req, res) => {

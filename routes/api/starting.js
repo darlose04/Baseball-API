@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const AllStarters = require("../../models/AllStarters");
 const Sequelize = require("sequelize");
+const Op = Sequelize.Op;
 
 // get all starters from the table
 router.get("/", (req, res) => {
