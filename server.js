@@ -20,7 +20,11 @@ const app = express();
 
 let allowCrossDomain = function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
+<<<<<<< HEAD
   res.header("Access-Control-Allow-Methods", "GET");
+=======
+  // res.header("Access-Control-Allow-Methods", "GET");
+>>>>>>> e152609a3bde833be3548c6eff58066e492e4302
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
