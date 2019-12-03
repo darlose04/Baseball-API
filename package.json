@@ -4,7 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "jest --verbose"
+    "start": "NODE_ENV=production node server.js",
+    "watch": "NODE_ENV=development nodemon server.js",
+    "test": "NODE_ENV=test jest --verbose --runInBand"
   },
   "author": "Zach Smith",
   "license": "MIT",
