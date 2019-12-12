@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+// const batterRouter = require("./routes/api/batting");
 require("dotenv").config();
 // const mysql = require("mysql");
 
