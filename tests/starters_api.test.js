@@ -3,7 +3,7 @@ const supertest = require("supertest");
 const app = require("../app");
 const api = supertest(app);
 
-describe("testing routes that return all pitching statistics (starters and relievers)", () => {
+describe("testing routes that return all starting pitching statistics", () => {
   test("complete stats are returned as json", async () => {
     console.log("Entered test...");
     await api
