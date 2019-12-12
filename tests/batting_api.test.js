@@ -1,4 +1,4 @@
-const Sequelize = require("sequelize");
+const sequelize = require("../config/database");
 const supertest = require("supertest");
 const app = require("../app");
 const api = supertest(app);
@@ -13,6 +13,4 @@ describe("testing routes that return hitting statistics", () => {
   });
 });
 
-// afterAll(async () => {
-//   await new Promise(resolve => setTimeout(() => resolve(), 500));
-// });
+afterAll(() => {});
