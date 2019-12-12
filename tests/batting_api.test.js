@@ -13,4 +13,6 @@ describe("testing routes that return hitting statistics", () => {
   });
 });
 
-afterAll(() => {});
+afterAll(() => {
+  sequelize.close();
+});
