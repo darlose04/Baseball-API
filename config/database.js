@@ -4,10 +4,10 @@ const Sequelize = require("sequelize");
 let HOST = process.env.HOST;
 let DIALECT = "mysql";
 
-if (process.env.NODE_ENV === "test") {
-  HOST = "localhost";
-  DIALECT = "mariadb";
-}
+// if (process.env.NODE_ENV === "test") {
+// HOST = "localhost";
+// DIALECT = "mariadb";
+// }
 
 const sequelize = new Sequelize("baseballstats", "zach", process.env.PASSWORD, {
   host: HOST,
