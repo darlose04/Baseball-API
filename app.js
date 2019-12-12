@@ -1,15 +1,5 @@
 const express = require("express");
 const cors = require("cors");
-// const batterRouter = require("./routes/api/batting");
-require("dotenv").config();
-// const mysql = require("mysql");
-
-// const db = mysql.createConnection({
-//   host: "localhost",
-//   user: "zach",
-//   password: process.env.PASSWORD,
-//   database: "baseballapi"
-// });
 
 const db = require("./config/database");
 
@@ -17,7 +7,6 @@ db.authenticate()
   .then(() => console.log("Database connected..."))
   .catch(err => console.log(err));
 
-// db.connect();
 const app = express();
 app.use(cors());
 
