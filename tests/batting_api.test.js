@@ -1,4 +1,4 @@
 const Sequelize = require("sequelize");
 const supertest = require("supertest");
-const server = require("../server");
-const api = supertest(server);
+const app = require("../app");
+const api = supertest(app);
