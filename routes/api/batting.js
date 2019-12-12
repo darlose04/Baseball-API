@@ -1,18 +1,17 @@
-const express = require("express");
-const router = express.Router();
+const batterRouter = require("express").Router();
 const AllBatters = require("../../models/AllBatters");
 const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
 
 // get all batters from the table
-router.get("/", (req, res) => {
+batterRouter.get("/", (req, res) => {
   AllBatters.findAll({
     order: [["team", "ASC"]]
   }).then(batters => res.json(batters));
 });
 
 // get individual player stats from every year
-router.get("/players/:name", (req, res) => {
+batterRouter.get("/players/:name", (req, res) => {
   AllBatters.findAll({
     where: {
       name: req.params.name
@@ -21,7 +20,7 @@ router.get("/players/:name", (req, res) => {
 });
 
 // get batters by year
-router.get("/:year", (req, res) => {
+batterRouter.get("/:year", (req, res) => {
   AllBatters.findAll({
     where: {
       year: req.params.year
@@ -31,7 +30,7 @@ router.get("/:year", (req, res) => {
 });
 
 // get individual batter by year
-router.get("/:year/players/:name", (req, res) => {
+batterRouter.get("/:year/players/:name", (req, res) => {
   AllBatters.findOne({
     where: {
       year: req.params.year,
@@ -41,7 +40,7 @@ router.get("/:year/players/:name", (req, res) => {
 });
 
 // get players by team by year
-router.get("/:year/teams/:team", (req, res) => {
+batterRouter.get("/:year/teams/:team", (req, res) => {
   AllBatters.findAll({
     where: {
       year: req.params.year,
@@ -50,4 +49,4 @@ router.get("/:year/teams/:team", (req, res) => {
   }).then(team => res.json(team));
 });
 
-module.exports = router;
+module.exports = batterRouter;
